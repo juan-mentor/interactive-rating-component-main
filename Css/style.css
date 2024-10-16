@@ -16,6 +16,8 @@
    
  /************** Sizes ***************/
   
+    --S-40: 2.5rem;
+    --S-35: 2.1875rem;
     --S-30: 1.875rem;
     --S-29: 1.8125rem;
     --S-25: 1.5625rem;
@@ -23,6 +25,7 @@
     --S-23: 1.4375rem;
     --S-21: 1.3125rem;
     --S-19: 1.1875rem;
+    --S-16_5: 1.03125rem;
     --S-15: 0.9375rem;
     --S-14_5: 0.91rem;
     --S-14: 0.875rem;
@@ -64,6 +67,9 @@ main {
     
     
 }
+
+/********** mobile styles **********/
+
    /********** request container  **********/
 
 .request {
@@ -72,7 +78,7 @@ main {
     width: 87%;
     max-width: 410px;
     border-radius: 15px;
-    padding: var(--S-30) var(--S-23) var(--S-29);
+    padding: var(--S-30) 1.3125rem var(--S-29);
     background-color: var(--dark-blue);
 }
 
@@ -141,6 +147,7 @@ main {
     letter-spacing: 2px;
     background-color: var(--orange);
     color: var(--very-dark-blue);
+    transition: all 0.3s;
 }
 
 .request__submit:hover {
@@ -165,8 +172,8 @@ main {
 }
 
 .answer__image {
-    width: 143px;
-    height: 102px;
+    width: 145px;
+    height: 104px;
     margin-bottom: var(--S-21);
 }
 
@@ -183,6 +190,7 @@ main {
 
 .answer__paragraph--result {
     width: max-content;
+    max-width: 195px;
     margin: auto;
     margin-bottom: var(--S-25);
     border-radius: 15px;
@@ -191,5 +199,55 @@ main {
     background-color: var(--light-grey-alpha);
 }
     
-    
+@media screen and (min-width: 30rem) {
+    /********** Desktop Styles ***********/
 
+      /***** request container *****/
+
+    .request {
+        padding: var(--S-40) var(--S-35) var(--S-29);
+    }
+
+    .request__icon-container {
+        padding: var(--S-14);
+        margin-bottom: var(--S-35);
+    }
+
+    .request__title {
+        font-size: var(--S-23);
+    }
+
+    .request__rate {
+        margin-bottom: var(--S-30);
+    }
+
+    .request__number {
+        width: 49px;
+        padding: var(--S-16_5);
+    }
+
+      /***** answer container *****/
+    
+    .answer {
+        padding: var(--S-40) var(--S-35);
+    }
+
+    .answer__image {
+        width: 165px;
+        margin-bottom: var(--S-29);
+    }
+
+    .answer__title {
+        font-size: var(--S-23);
+        margin-bottom: var(--S-21);
+    }
+        
+    .answer__paragraph {
+        font-size: var(--S-15);
+        max-width: 343px;
+    }
+
+    .answer__paragraph--result {
+        margin-bottom: var(--S-40);
+    }
+}    

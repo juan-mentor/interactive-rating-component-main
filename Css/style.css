@@ -109,6 +109,8 @@ main {
 }
 
 .request__number {
+    width: 45px;
+    text-align: center;
     border-radius: 50%;
     padding: var(--S-14_5);
     background-color: var(--light-grey-alpha);
@@ -123,6 +125,11 @@ main {
     cursor: pointer;
 }
 
+.active {
+    background-color: var(--white);
+    color: var(--very-dark-blue);
+}
+
 .request__submit {
     width: 100%;
     border: none;
@@ -135,12 +142,22 @@ main {
     background-color: var(--orange);
     color: var(--very-dark-blue);
 }
+
+.request__submit:hover {
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.send {
+    z-index: -1;
+}
     
 /********** answer container **********/
 
 .answer {
     position: absolute;
     width: 88%;
+    max-width: 425px;
     border-radius: 15px;
     padding: var(--S-30) var(--S-24);
     text-align: center;
